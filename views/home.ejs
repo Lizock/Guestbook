@@ -18,36 +18,36 @@
 
             <div class="container">
                 <label>First Name
-                    <input type="text" id="fName">
+                    <input type="text" id="fName" name="fname">
                     <span id = "err-fName" class="err">
                         First name is required
                     </span>
                 </label>
 
                 <label>Last Name
-                    <input type="text" id="lName">
+                    <input type="text" id="lName" name="lname">
                     <span id="err-lName" class="err">
                         Last name is required
                     </span>
                 </label>
                 
                 <label>Job Title
-                    <input type="text" id="job">
+                    <input type="text" id="job" name="job">
                 </label>
                 
                 <label>Company
-                    <input type="text" id="company">
+                    <input type="text" id="company" name="company">
                 </label>
 
                 <label>LinkedIn URL
-                    <input type="text" id="url">
+                    <input type="text" id="url" name="linkedIn">
                     <span id="err-url" class="err">
                         Enter URL in correct format
                     </span>
                 </label>
 
                 <label>Email Address
-                    <input type="text" id="email">
+                    <input type="text" id="email" name="email">
                     <span id="err-email" class="err">
                         Must be in email format
                     </span>
@@ -59,7 +59,7 @@
             <div class="middle">
                 <div class="meet">
                     <label for="places">How did we meet?</label>
-                    <select name="places" id="places" onchange="updateContent()">
+                    <select name="met" id="places" onchange="updateContent()">
                         <option value="select">Please select</option>
                         <option value="school">School</option>
                         <option value="college">College</option>
@@ -83,24 +83,24 @@
 
             <div id="message-box">
                 <label>Message
-                    <textarea></textarea>
+                    <textarea name="message"></textarea>
                 </label>
             </div>
             
             <div id="mailList">
-                <label for="checkbox"> <input type="checkbox" id="checked" onchange="updateContent2()"> 
+                <label for="checkbox"> <input type="checkbox" id="checked" onchange="updateContent2()" name="mail_list"> 
                     Please add me to your mailing list
                 </label>
             </div>
             <div id="hide2">
                 <p><b>Choose email format:</b>
                     <label>
-                        <input type="radio" id="html" name="emailFormat" value="html" checked>
+                        <input type="radio" id="html" name="email_format" value="html" checked>
                         HTML
                     </label>
 
                     <label>
-                        <input type="radio" id="text" name="emailFormat" value="text">
+                        <input type="radio" id="text" name="email_format" value="text">
                         Text
                     </label>
                 </p>
