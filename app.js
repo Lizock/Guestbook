@@ -66,7 +66,7 @@ app.post('/success', async (req, res) => {
     await conn.query(
         `INSERT INTO guestbook (fname, lname, job, company, linkedIn, email, met, other, message, mail_list, email_format)
         VALUES('${data.fname}','${data.lname}','${data.job}','${data.company}','${data.linkedIn}',
-        '${data.email}','${data.met}','${data.other}','${data.message}','${data.mail_list}','${data.email_format}')`
+        '${data.email}','${data.met}','${data.other}','${data.message}','${data.mail_list}','${data.email_format}');`
     );
 
     //Render the success page, and pass the form data
