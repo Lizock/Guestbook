@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Admin Page</title>
+</head>
+<body>
+    <h1 id="summary">Guestbook Summary</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>LinkedIn URL</th>
+                <th>Email Adress</th>
+                <th>How We Met</th>
+                <th>Other</th>
+                <th>Message</th>
+                <th>Mailing List</th>
+                <th>Email Format</th>
+                <th>Date Submitted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% guestbook.forEach(data => { %>
+                <tr>
+                    <td><%= data.id %></td>
+                    <td><%= data.fname %> <%= data.lname %></td>
+                    <td><%= data.job %></td>
+                    <td><%= data.company %></td>
+                    <td><%= data.linkedIn %></td>
+                    <td><%= data.email %></td>
+                    <td><%= data.met %></td>
+                    <td><%= data.other %></td>
+                    <td><%= data.message %></td>
+                    <td><%= data.mail_list %></td>
+                    <td><%= data.email_format %></td>
+                    <td><%= data.date_submitted %></td>
+                </tr>
+           <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="/scripts/script.js" defer></script>
+
+    <title>Guestbook Form</title>
+</head>
+
+<body>
+    <div class="box">
+        <form id="guestbook-form" method="post" action="success">
+            <header>
+                <h1>Contact Form</h1>
+            </header>
+
+            <div class="container">
+                <label>First Name
+                    <input type="text" id="fName">
+                    <span id = "err-fName" class="err">
+                        First name is required
+                    </span>
+                </label>
+
+                <label>Last Name
+                    <input type="text" id="lName">
+                    <span id="err-lName" class="err">
+                        Last name is required
+                    </span>
+                </label>
+                
+                <label>Job Title
+                    <input type="text" id="job">
+                </label>
+                
+                <label>Company
+                    <input type="text" id="company">
+                </label>
+
+                <label>LinkedIn URL
+                    <input type="text" id="url">
+                    <span id="err-url" class="err">
+                        Enter URL in correct format
+                    </span>
+                </label>
+
+                <label>Email Address
+                    <input type="text" id="email">
+                    <span id="err-email" class="err">
+                        Must be in email format
+                    </span>
+                    <span id="err-email2" class="err">
+                        Enter your email
+                    </span>
+                </label>
+            </div>
+            <div class="middle">
+                <div class="meet">
+                    <label for="places">How did we meet?</label>
+                    <select name="places" id="places" onchange="updateContent()">
+                        <option value="select">Please select</option>
+                        <option value="school">School</option>
+                        <option value="college">College</option>
+                        <option value="job_fair">Job Fair</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span id="err-meet" class="err">
+                        Must Select
+                    </span>
+                </div>
+
+                <div class="other">
+                    <label id="hide">Other (please specify)
+                        <input type="text" id="other" name="other">
+                        <span id="err-other" class="err">
+                            Field required
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div id="message-box">
+                <label>Message
+                    <textarea></textarea>
+                </label>
+            </div>
+            
+            <div id="mailList">
+                <label for="checkbox"> <input type="checkbox" id="checked" onchange="updateContent2()"> 
+                    Please add me to your mailing list
+                </label>
+            </div>
+            <div id="hide2">
+                <p><b>Choose email format:</b>
+                    <label>
+                        <input type="radio" id="html" name="emailFormat" value="html" checked>
+                        HTML
+                    </label>
+
+                    <label>
+                        <input type="radio" id="text" name="emailFormat" value="text">
+                        Text
+                    </label>
+                </p>
+            </div>
+            <button type="submit" id="click">Submit</button>
+
+        </form>
+    </div>
+</body>
+</html>
+
