@@ -1,4 +1,4 @@
-CREATE DATABASE guestbook;
+-- CREATE DATABASE guestbook;
 USE guestbook;
 
 DROP TABLE IF EXISTS guestbook;
@@ -20,6 +20,7 @@ CREATE TABLE guestbook (
     );
     
     INSERT INTO guestbook (fname, lname, job, company, linkedIn, email, met, other, message, mail_list, email_format)
-    VALUES ('Bob', 'Doe', 'Batler', 'Wow Company', 'www.linkedin.com/in/bob-doe', 'doe@gmail.com', 'Other', 'We met at the hotel', 'I am so grateful that we have met!', 'check', 'Text');
+    VALUES ('Bob', 'Doe', 'Butler', 'Wow Company', 'www.linkedin.com/in/bob-doe', 'doe@gmail.com', 'Other', 'We met at the hotel', 'I am so grateful that we have met!', 'check', 'Text');
     
     SELECT * FROM guestbook;
+    
